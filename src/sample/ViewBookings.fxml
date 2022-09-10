@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1104.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BookingsController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="81.0" prefWidth="1111.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <Label layoutX="20.0" layoutY="22.0" text="Travel" textFill="WHITE">
+               <font>
+                  <Font name="Forte" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="388.0" layoutY="1.0" text="Bookings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="889.0" layoutY="20.0" onAction="#addbus" text="AddBus" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="1012.0" layoutY="17.0" onAction="#logout" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="-2.0" layoutY="365.0" prefHeight="285.0" prefWidth="1109.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="108.0" text="Name" />
+          <TableColumn fx:id="phone" prefWidth="94.0" text="Phone" />
+            <TableColumn fx:id="source" prefWidth="89.0" text="Source" />
+            <TableColumn fx:id="destination" minWidth="9.0" prefWidth="104.0" text="Destination" />
+            <TableColumn fx:id="service" prefWidth="103.0" text="Service" />
+            <TableColumn fx:id="date" prefWidth="69.0" text="Date" />
+            <TableColumn fx:id="seats" prefWidth="81.0" text="Seats" />
+            <TableColumn fx:id="amount" prefWidth="125.0" text="Total" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nametxt" layoutX="14.0" layoutY="122.0" />
+      <Label layoutX="14.0" layoutY="87.0" text="name">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sourcetxt" disable="true" layoutX="14.0" layoutY="188.0" />
+      <Label layoutX="14.0" layoutY="153.0" text="Source">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="servicetxt" disable="true" layoutX="14.0" layoutY="254.0" />
+      <Label layoutX="14.0" layoutY="219.0" text="Service">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt" layoutX="14.0" layoutY="320.0" />
+      <Label layoutX="14.0" layoutY="285.0" text="Seats">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="phonetxt" layoutX="224.0" layoutY="122.0" />
+      <Label layoutX="224.0" layoutY="87.0" text="Phone">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="destinationtxt" disable="true" layoutX="224.0" layoutY="188.0" />
+      <Label layoutX="224.0" layoutY="153.0" text="Destination">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="datetxt" disable="true" layoutX="224.0" layoutY="254.0" />
+      <Label layoutX="224.0" layoutY="219.0" text="Date">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totaltxt" disable="true" layoutX="224.0" layoutY="320.0" />
+      <Label layoutX="224.0" layoutY="285.0" text="Total">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnupdate" layoutX="466.0" layoutY="320.0" mnemonicParsing="false" onAction="#update" prefHeight="37.0" prefWidth="147.0" text="Update">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btndelete" layoutX="636.0" layoutY="317.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="147.0" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="clear" layoutX="807.0" layoutY="317.0" mnemonicParsing="false" onAction="#clear" prefHeight="37.0" prefWidth="147.0" text="Clear">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
